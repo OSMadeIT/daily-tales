@@ -3,7 +3,8 @@
 <div class="row">
 <div class="col" ng-repeat="story in stories">
     <div class="card">
-        <div class="card-body" ng-controller="myCtrl">
+        <h5 class="card-header">Tale #{{story.id}}</h5>
+        <div class="card-body">
             <form>
             <div class="form-group">
               <label for="title">Title</label>
@@ -13,7 +14,7 @@
               <label for="body">Real Story</label>
               <textarea class="form-control" id="body" rows="3" ng-model="story.story"></textarea>
             </div>
-                <button ui-sref="home" class="btn btn-success btn-block" ng-click="updateData(story.id);">Update</button>
+                <button class="btn btn-success btn-block" ng-click="updateData(story.id, story.title, story.story);">Update</button>
             </form>
         </div>
         </div>

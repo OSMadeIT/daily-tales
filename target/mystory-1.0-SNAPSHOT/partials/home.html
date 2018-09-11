@@ -7,13 +7,13 @@
                   <h6 class="card-subtitle mb-2 text-muted">Posted: {{story.createdAt}}</h6>
                   <p class="card-text" ng-model="storoBody">{{story.story}}</p>
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal-{{story.id}}">
                   Delete story
                 </button>                  
                 </div>
             </div><br>
             <!-- Modal -->
-            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal fade" id="deleteModal-{{story.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
