@@ -1,0 +1,17 @@
+<div class="col">
+    <div class="card mx-auto" style="width: 18rem;">
+        <div class="card-body" ng-controller="myCtrl">
+            <form>
+            <div class="form-group">
+              <label for="title">Title</label>
+              <input type="text" class="form-control" ng-model="storyTitle" name="title" id="title" placeholder="Story title">
+            </div>
+            <div class="form-group">
+              <label for="body">Real Story</label>
+              <textarea class="form-control" id="body" rows="3" ng-model="storyBody"></textarea>
+            </div>
+                <button type="submit" class="btn btn-success btn-block" ng-click="sendData()">Post</button>
+            </form>
+        </div>
+    </div>
+</div>

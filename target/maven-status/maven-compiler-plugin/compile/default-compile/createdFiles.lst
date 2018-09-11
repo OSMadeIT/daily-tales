@@ -1,0 +1,5 @@
+com\osmadeit\mystory\config\ApplicationConfig.class
+com\osmadeit\mystory\rest\StoriesRest.class
+com\osmadeit\mystory\beans\StoriesBean.class
+com\osmadeit\mystory\entities\Stories_.class
+com\osmadeit\mystory\entities\Stories.class
