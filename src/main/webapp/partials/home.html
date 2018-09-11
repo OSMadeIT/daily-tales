@@ -1,14 +1,36 @@
 <div class="container">
-    <div class="row">
         <div class="col" ng-repeat="story in stories">
-            <div class="card" style="width: 18rem;">
+            <div class="card">
+                  <h5 class="card-header">Tale #{{story.id}}</h5>
                 <div class="card-body">
                   <h5 class="card-title" ng-model="storoBody">{{story.title}}</h5>
                   <h6 class="card-subtitle mb-2 text-muted">Posted: {{story.createdAt}}</h6>
                   <p class="card-text" ng-model="storoBody">{{story.story}}</p>
-                  <button class="btn btn-danger btn-block" ng-click="deleteData(story.id);">Delete</button>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
+                  Delete story
+                </button>                  
                 </div>
+            </div><br>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">DELETE STORY</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                      Delete <b>{{story.title}}</b> forever?
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button data-dismiss="modal" ng-click="deleteData(story.id);" class="btn btn-danger">Delete</button>
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
-    </div>
+        </div>    
 </div>

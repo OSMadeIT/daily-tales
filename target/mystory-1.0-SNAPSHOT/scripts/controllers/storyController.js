@@ -25,7 +25,7 @@ app.config(function($stateProvider) {
    $stateProvider.state(editStoryState);
 });
 
-app.controller('myCtrl', function($scope, $http, $location) {
+app.controller('myCtrl', function($scope, $http, $state) {
     $http({
         method : "GET",
         url : "api/stories/list"
@@ -41,8 +41,8 @@ app.controller('myCtrl', function($scope, $http, $location) {
                 "story": $scope.storyBody,
                 "createdAt": "2018-09-10T08:10:04Z[UTC]"
             };    
-    $http.post('api/stories/create', storyData).success(function () {
-    $location.path('/#!/home');
+    $http.post('api/stories/create', storyData).success(function (data) {
+     $state.go('home');
   });
 };
 
@@ -51,7 +51,7 @@ app.controller('myCtrl', function($scope, $http, $location) {
         var storo = { 
             id: storyId 
         };    
-        $http.delete('api/stories/delete/'  + storo.id);
+        $http.delete('api/stories/delete/'  + storo.id)
 
 };
 
@@ -61,7 +61,11 @@ app.controller('myCtrl', function($scope, $http, $location) {
             "title": $scope.story.title,
             "story": $scope.story.story
         };    
-        $http.put('api/stories/update/'  + Id.id, editedStory);
+        $http.put('api/stories/update/'  + Id.id, editedStory).then(function mySuccess(response) {
+        $state.go('/home');
+    }, function myError(response) {
+        $scope.myWelcome = response.statusText;
+      });
 
     };
 
