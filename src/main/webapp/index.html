@@ -1,40 +1,42 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>HOME</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    </head>
-    <body ng-app="myApp" ng-controller="myCtrl">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar navbar-light navbar-brand" style="background-color: #e3f2fd;" ui-sref="home">Stories</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" ui-sref="stories">New Story <span class="sr-only">(current)</span></a>
-                </li>
-                 <li class="nav-item active">
-                  <a class="nav-link" ui-sref="edit">Edit Stories <span class="sr-only">(current)</span></a>
-                </li>
-              </ul>
-            </div>
-        </nav><hr>
+<head>
+  <title>HOME</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
 
-        <ui-view></ui-view>
-        
-        <hr>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
-        <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>-->
-        <script type="text/javascript" src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
-        <script type="text/javascript" src="node_modules/angular-messages/angular-messages.min.js"></script>
-        <script type="text/javascript" src="scripts/controllers/storyController.js"></script>
-        <!--<script type="text/javascript" src="js/factories/storyFactory.js"></script>-->
-        <!--<script type="text/javascript" src="scripts/routes/storyRoutes.js"></script>-->
-    </body>
+<body ng-app="myApp" ng-controller="myCtrl">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar navbar-light navbar-brand" style="background-color: #e3f2fd;" ui-sref="home">Stories</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" ui-sref="stories">New Story <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" ui-sref="edit">Edit Stories <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <hr>
+
+  <ui-view></ui-view>
+
+  <hr>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+  <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script type="text/javascript" src="node_modules/angular-messages/angular-messages.min.js"></script>
+  <script type="text/javascript" src="scripts/controllers/storyController.js"></script>
+</body>
+
 </html>
